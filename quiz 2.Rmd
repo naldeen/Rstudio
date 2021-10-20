@@ -1,0 +1,39 @@
+---
+title: "Quiz2"
+author: "Nour Aldeen"
+date: "20/10/2021"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+1. This is a document for Quiz 2 in wich i will analyz the Iris dataset in R.
+2. the details of the IRIS dataset can be found at 
+[Link][qu.edu.qa]
+
+```{r iris}
+summary(iris)
+```
+
+## Random samples from Iris data
+
+```{r irirs}
+sample(iris$Sepal.Length, 10)
+```
+
+
+
+##  Plots for Iris data
+
+Below you can see the scatter plot of Sepal Length vs Sepal width, and the histogram of Sepal Length
+```{r pressure, echo=FALSE}
+attach(iris)
+par(mfrow= c(1,2))
+plot(Sepal.Length,Sepal.Width, main = 'scatter plot')
+hist(Sepal.Length, main = 'histogram')
+```
+
